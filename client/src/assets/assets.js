@@ -16,6 +16,7 @@ import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 import basket_icon from './basket_icon.png';
 import search_icon from './search_icon.png';
+import bikes_header from './bikeheader.webp'
 
 
 import bike1 from './bike1.jpg'
