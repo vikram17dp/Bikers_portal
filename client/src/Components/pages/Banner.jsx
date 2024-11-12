@@ -6,7 +6,7 @@ const Banner = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col md:flex-row bg-gradient-to-r from-blue-500 to-blue-500 rounded-lg px-6 sm:px-10 md:px-14 lg:px-16 my-20 md:mx-10 text-left shadow-lg overflow-hidden">
+    <div className="flex flex-col md:flex-row bg-gradient-to-r from-gray-400 to-gray-500 rounded-lg px-6 sm:px-10 md:px-14 lg:px-16 my-20 md:mx-10 text-left shadow-lg overflow-hidden">
       {/* Left Section with Text and Button */}
       <div className="flex-1 py-10 sm:py-12 md:py-16 lg:py-24 lg:pl-6 text-white">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
