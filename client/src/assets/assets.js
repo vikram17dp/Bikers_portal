@@ -26,7 +26,7 @@ import bike4 from './bike4.jpg'
 import bike5 from './bike5.jpg'
 import bike6 from './bike6.jpg'
 import bike7 from './bike7.jpg'
-import bike8 from './bike8.jpg'
+import bike8 from './bike8.png'
 import bike9 from './bike9.jpg'
 import bike10 from './bike10.jpg'
 import bike11 from './bike11.jpg'
@@ -74,7 +74,34 @@ export const assets ={
     remove_icon_red,
     selector_icon,
     search_icon,
-    twitter_icon
+    twitter_icon,
+    bike1,
+    bike2,
+    bike3,
+    bike4,
+    bike5,
+    bike6,
+    bike7,
+    bike8,
+    bike9,
+    bike10,
+    bike11,
+    bike12,
+    engine1,
+    engine2,
+    engine3,
+    engine4,
+    engine5,
+    engine6,
+    helmet2,
+    helmet3,
+    helmet4,
+    exaust1,
+    exaust2,
+    exaust3,
+    parts1,
+    parts2,
+    parts3
     
 
 }
