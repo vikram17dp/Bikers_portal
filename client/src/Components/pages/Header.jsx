@@ -13,13 +13,13 @@ export default function Header() {
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
-              Find Your Perfect Ride
+            Your One-Stop Destination for Bikes and Parts
             </h1>
             <div className="text-[2vh] font-light mb-8">
               <p>
-                Discover a wide range of bikes from trusted sellers.
+              From motorcycles to spare parts, find everything in one place.
                 <br className="hidden sm:block" />
-                Simply explore, compare, and book your dream bike effortlessly.
+                Simply explore, compare, and book your dream bike effortlessly  .
               </p>
             </div>
             <a

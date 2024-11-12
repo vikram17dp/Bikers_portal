@@ -78,6 +78,32 @@ export const assets ={
     
 
 }
+export const specialityData = [
+    {
+        speciality: 'Bikes',
+        image: bike7
+    },
+    {
+        speciality: 'Engines',
+        image: engine1
+    },
+    {
+        speciality: 'Helmets',
+        image: helmet2
+    },
+    {
+        speciality: 'Parts',
+        image: parts1
+    },
+    {
+        speciality: 'Exhausts',
+        image: exaust1
+    },
+    {
+        speciality: 'Wheels',
+        image: wheel1
+    }
+];
 export const portal_list = [
     {
         _id: "1",
