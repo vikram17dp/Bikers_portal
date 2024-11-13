@@ -1,6 +1,6 @@
 export default function Header() {
     return (
-      <header className="relative min-h-screen bg-gray-900 text-white overflow-hidden">
+      <header className="relative min-h-screen bg-gray-900 text-white overflow-hidden font-sans">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -12,13 +12,13 @@ export default function Header() {
   
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-script leading-tight mb-6">
             Your One-Stop Destination for Bikes and Parts
             </h1>
             <div className="text-[2vh] font-light mb-8">
-              <p>
+              <p className="font-script">
               From motorcycles to spare parts, find everything in one place.
-                <br className="hidden sm:block" />
+                <br className="hidden sm:block font-script" />
                 Simply explore, compare, and book your dream bike effortlessly  .
               </p>
             </div>

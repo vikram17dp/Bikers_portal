@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-white text-black h-16 flex items-center justify-between px-6 sm:px-12 relative border-b-2 border-gray-300 ">
+    <div className="bg-white text-black h-16 flex items-center justify-between px-6 sm:px-12 relative border-b-2 border-gray-300 font-sans ">
       {/* Logo Section */}
       <div>
         <Link to="/">

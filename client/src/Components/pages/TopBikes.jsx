@@ -10,8 +10,8 @@ const TopBikes = () => {
 
   return (
     <div className="flex flex-col items-center gap-8  text-gray-900 md:mx-10 text-center">
-      <h1 className="text-4xl font-bold">Top Bikes to Book</h1>
-      <p className="sm:w-1/2 text-[16px] text-gray-600">
+      <h1 className="text-4xl font-bold text-gray-500">Top Bikes to Book</h1>
+      <p className="sm:w-1/2 text-[14px]  ">
         Explore our selection of top bikes available for booking.
       </p>
       
@@ -34,7 +34,7 @@ const TopBikes = () => {
             />
             {/* Bike Details */}
             <div className="p-4  ">
-              <h2 className="text-xl font-semibold mb-2">{bike.bike_name}</h2>
+              <h2 className="text-xl font-semibold mb-2 text-gray-700">{bike.bike_name}</h2>
               <p className="text-gray-500 text-sm mb-4">{bike.description}</p>
               <div className="flex justify-between items-center text-sm mt-3">
                 <span className="text-blue-700 font-bold">${bike.bike_price}</span>
