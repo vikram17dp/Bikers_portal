@@ -18,6 +18,7 @@ function App() {
         <Route path='/Signin' element={<Sigin/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/all-bikes' element={<AllBikes/>}/>
+        <Route path='/all-bikes/:category' element={<AllBikes />} />
       </Routes>
       <Footer/>
 

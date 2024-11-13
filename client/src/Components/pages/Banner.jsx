@@ -4,7 +4,10 @@ import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
   const navigate = useNavigate();
-
+  const handleViewMoreClick = () => {
+    navigate('/all-bikes'); 
+    window.scrollTo(0, 0); 
+  };
   return (
     <div className="flex flex-col md:flex-row bg-gradient-to-r from-gray-400 to-gray-500 rounded-lg px-6 sm:px-10 md:px-14 lg:px-16 my-20 md:mx-10 text-left shadow-lg overflow-hidden">
       {/* Left Section with Text and Button */}
@@ -17,7 +20,7 @@ const Banner = () => {
           Explore a wide range of bikes available for booking and enjoy a seamless riding experience.
         </p>
         <button
-          onClick={() => navigate('/bikes')}
+          onClick={handleViewMoreClick}
           className="bg-white text-blue-700 font-medium text-sm sm:text-base px-8 py-3 rounded-full hover:scale-105 hover:shadow-xl transition-transform duration-300 mt-10"
         >
           View Bikes

@@ -101,21 +101,23 @@ export const assets ={
     exaust3,
     parts1,
     parts2,
-    parts3
-    
+    parts3,
+    wheel1,
+    wheel2,
+    wheel3
 
 }
 export const specialityData = [
     {
-        speciality: 'Bikes',
+        speciality: 'bike',
         image: bike7
     },
     {
-        speciality: 'Engines',
+        speciality: 'engine',
         image: engine1
     },
     {
-        speciality: 'Helmets',
+        speciality: 'helmet',
         image: helmet2
     },
     {
@@ -123,11 +125,11 @@ export const specialityData = [
         image: parts1
     },
     {
-        speciality: 'Exhausts',
+        speciality: 'exaust',
         image: exaust1
     },
     {
-        speciality: 'Wheels',
+        speciality: 'wheel',
         image: wheel1
     }
 ];
@@ -339,24 +341,24 @@ export const portal_list = [
     {
         _id: "25",
         helmet_name: "Full Face Helmet",
-        bike_image: helmet2,
-        bike_price: "199",
+        helmet_image: helmet2,
+        helmet_price: "199",
         category: "Helmet",
         description: "Provides full protection with an aerodynamic design."
     },
     {
         _id: "26",
         helmet_name: "Modular Helmet",
-        bike_image: helmet3,
-        bike_price: "249",
+        helmet_image: helmet3,
+        helmet_price: "249",
         category: "Helmet",
         description: "Versatile helmet with a flip-up chin bar."
     },
     {
         _id: "27",
         helmet_name: "Open Face Helmet",
-        bike_image: helmet4,
-        bike_price: "149",
+        helmet_image: helmet4,
+        helmet_price: "149",
         category: "Helmet",
         description: "Classic design offering great visibility and ventilation."
     },
@@ -365,7 +367,7 @@ export const portal_list = [
         wheel_name: "Sport Bike Tire",
         wheel_image: wheel1,
         wheel_price: "299",
-        category: "Wheels",
+        category: "wheel",
         description: "Designed for maximum grip and performance."
     },
     {
@@ -373,7 +375,7 @@ export const portal_list = [
         wheel_name: "Cruiser Tire",
         wheel_image: wheel2,
         wheel_price: "249",
-        category: "Wheels",
+        category: "wheel",
         description: "Smooth riding and long-lasting durability."
     },
     {
@@ -381,7 +383,7 @@ export const portal_list = [
         wheel_name: "Off-Road Tire",
         wheel_image: wheel3,
         wheel_price: "199",
-        category: "Wheels",
+        category: "wheel",
         description: "Designed for traction on uneven terrain."
     },
 ];

@@ -1,13 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { portal_list } from "../../assets/assets.js"; // Ensure this is the correct path to your data file
-
+import { portal_list } from "../../assets/assets.js"; 
 const TopBikes = () => {
   const navigate = useNavigate();
 
-  // Filter the bike-related data from portal_list
   const topBikes = portal_list.filter((item) => item.category === "Bike").slice(0, 9); // Showing 9 bikes for a cleaner 3x3 grid
-
+  const handleViewMoreClick = () => {
+    navigate('/all-bikes'); 
+    window.scrollTo(0, 0); 
+  };
   return (
     <div className="flex flex-col items-center gap-8  text-gray-900 md:mx-10 text-center">
       <h1 className="text-4xl font-bold text-gray-500">Top Bikes to Book</h1>
@@ -22,7 +23,7 @@ const TopBikes = () => {
             key={bike._id}
             onClick={() => {
               navigate(`/bike-details/${bike._id}`);
-              window.scrollTo(0, 0); // Scroll to the top of the page
+              window.scrollTo(0, 0); 
             }}
             className="border border-gray-200 rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform duration-500 hover:-translate-y-2 hover:shadow-xl"
           >
@@ -47,7 +48,7 @@ const TopBikes = () => {
 
       {/* View More Button */}
       <button
-        onClick={() => navigate('/bikes')}
+        onClick={handleViewMoreClick}
         className="bg-blue-500 text-white px-8 py-3 rounded-full mt-6 hover:bg-blue-600 transition-colors duration-300"
       >
         View More Bikes
