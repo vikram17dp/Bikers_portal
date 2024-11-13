@@ -12,13 +12,13 @@ export default function Header() {
   
         <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-script leading-tight mb-6">
+            <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold leading-tight mb-6">
             Your One-Stop Destination for Bikes and Parts
             </h1>
             <div className="text-[2vh] font-light mb-8">
-              <p className="font-script">
+              <p className="font-script sm:text-[14px]">
               From motorcycles to spare parts, find everything in one place.
-                <br className="hidden sm:block font-script" />
+                <br className="hidden sm:block font-script sm:text-[14px]" />
                 Simply explore, compare, and book your dream bike effortlessly  .
               </p>
             </div>
