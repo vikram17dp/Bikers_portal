@@ -7,6 +7,7 @@ import Contact from './Components/Contact'
 import AllBikes from './Components/AllBikes'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
+import SignUp from './Components/Signup'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/Signin' element={<Sigin/>}/>
+        <Route path='/SignUp' element={<SignUp/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/all-bikes' element={<AllBikes/>}/>
         <Route path='/all-bikes/:category' element={<AllBikes />} />
