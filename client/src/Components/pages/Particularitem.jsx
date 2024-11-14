@@ -119,7 +119,7 @@ const Particularitem = () => {
                   <p className="text-xl font-bold text-blue-500">Features:</p>
                   <ul className="list-disc pl-5 space-y-3 mt-3 ">
                     {itemDetails.features.map((feature, index) => (
-                      <li key={index} className="text-gray-700 text-sm font-medium">
+                      <li key={index} className="text-gray-700 text-sm font-sans   ">
                         {feature}
                       </li>
                     ))}
