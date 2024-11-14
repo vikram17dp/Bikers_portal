@@ -42,16 +42,16 @@ const Navbar = () => {
           </div>
 
           {/* Create Account Button (Visible on larger screens) */}
-          <div className="ml-36 sm:block">
+          <div className="ml-32 sm:block ">
             <Link to="/SignUp">
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">
+              <button className="bg-blue-600 text-white px-2 py-3  lg:px-4 lg:py-2 rounded-lg">
                 Create Account
               </button>
             </Link>
           </div>
 
           {/* Hamburger Menu for Small Screens */}
-          <div className="sm:hidden">
+          <div className="sm:hidden ">
             <button onClick={handleToggleMenu} className="text-black">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
