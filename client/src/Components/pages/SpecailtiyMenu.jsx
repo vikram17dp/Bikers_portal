@@ -11,7 +11,7 @@ const SpecailtiyMenu = () => {
         Simply browse through our extensive categories and gear up for your next ride.</p>
         <div className='flex sm:justify-center gap-4 pt-5 w-full overflow-scroll'>
             {specialityData.map((item,index)=>(
-                <Link onClick={()=>scrollTo(0,0)} key={index} to={`/doctors/${item.speciality}`} className='flex flex-col items-center text-xs cursor-pointer flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500'>
+                <Link onClick={()=>scrollTo(0,0)} key={index} to={`/all-bikes/${item.speciality}`} className='flex flex-col items-center text-xs cursor-pointer flex-shrink-0 hover:translate-y-[-10px] transition-all duration-500'>
                    <div className='w-20 h-20 sm:w-28 sm:h-28 bg-gray-200 rounded-full overflow-hidden flex items-center justify-center shadow-lg hover:shadow-xl transition-shadow duration-300'>
               <img src={item.image} alt={item.category} className='w-full h-full object-cover' />
             </div>

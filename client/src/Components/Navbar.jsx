@@ -43,7 +43,7 @@ const Navbar = () => {
 
           {/* Create Account Button (Visible on larger screens) */}
           <div className="ml-36 sm:block">
-            <Link to="/signin">
+            <Link to="/SignUp">
               <button className="bg-blue-600 text-white px-4 py-2 rounded-lg">
                 Create Account
               </button>
