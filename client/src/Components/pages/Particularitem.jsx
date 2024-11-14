@@ -45,12 +45,12 @@ const Particularitem = () => {
           <img
             src={itemDetails[`${itemDetails.category.toLowerCase()}_image`]}
             alt={itemDetails[`${itemDetails.category.toLowerCase()}_name`]}
-            className="w-full max-h-[100vh] object-cover rounded-lg shadow-lg"
+            className="w-full max-h-[100vh] mt-4 object-cover rounded-lg shadow-lg sm:mt-4"
           />
         </div>
 
         {/* Details Section */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-between gap-4">
+        <div className="w-full lg:w-1/2 flex flex-col justify-between gap-4 mt-4 ">
           <div className="space-y-4">
             <p className="text-2xl font-bold text-blue-500">Description:</p>
             <p className="text-gray-700 text-sm leading-relaxed">

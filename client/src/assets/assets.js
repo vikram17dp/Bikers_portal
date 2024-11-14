@@ -506,30 +506,60 @@ export const portal_list = [
                 
               }
 ,              
-    {
-        _id: "22",
-        parts_name: "Brake Pads",
-        parts_image: parts1,
-        parts_price: "79",
-        category: "Parts",
-        description: "High-performance brake pads for better stopping power."
-    },
-    {
-        _id: "23",
-        parts_name: "Air Filter",
-        parts_image: parts2,
-        parts_price: "49",
-        category: "Parts",
-        description: "Improves airflow and engine performance."
-    },
-    {
-        _id: "24",
-        parts_name: "Chain Lubricant",
-        parts_image: parts3,
-        parts_price: "29",
-        category: "Parts",
-        description: "Keeps the chain running smoothly and extends its life."
-    },
+{
+    _id: "22",
+    parts_name: "Brake Pads",
+    parts_image: parts1,
+    parts_price: "79",
+    category: "Parts",
+    description: "High-performance brake pads for better stopping power.",
+    brand: "Brembo",
+    weight: "0.5 kg",
+    compatibility: "Compatible with most motorcycles",
+    features: [
+      "Improved braking performance",
+      "Low dust generation",
+      "Long-lasting durability",
+      "Easy installation"
+    ],
+    video_url: "https://www.youtube.com/embed/someVideoID1"
+  },
+  {
+    _id: "23",
+    parts_name: "Air Filter",
+    parts_image: parts2,
+    parts_price: "49",
+    category: "Parts",
+    description: "Improves airflow and engine performance.",
+    brand: "K&N",
+    weight: "0.3 kg",
+    compatibility: "Universal fit for most engines",
+    features: [
+      "Enhances engine performance",
+      "Reusable design",
+      "High air-flow efficiency",
+      "Improved acceleration"
+    ],
+    video_url: "https://www.youtube.com/embed/someVideoID2"
+  },
+  {
+    _id: "24",
+    parts_name: "Chain Lubricant",
+    parts_image: parts3,
+    parts_price: "29",
+    category: "Parts",
+    description: "Keeps the chain running smoothly and extends its life.",
+    brand: "Motul",
+    weight: "0.2 kg",
+    compatibility: "Compatible with all types of chains",
+    features: [
+      "Reduces friction and wear",
+      "Water-resistant",
+      "Increases chain lifespan",
+      "Improved chain performance"
+    ],
+    video_url: "https://www.youtube.com/embed/someVideoID3"
+  },
     {
         _id: "25",
         helmet_name: "Full Face Helmet",
