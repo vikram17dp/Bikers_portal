@@ -57,7 +57,7 @@ const Particularitem = () => {
               {itemDetails.description}
             </p>
 
-            <div className="text-gray-500 space-y-2 border-t border-gray-300 pt-4">
+            <div className="text-gray-500 space-y-4 border-t border-gray-300 pt-4 ">
               <p className="text-xl">
                 <span className="font-bold text-blue-500">Price:</span> ₹
                 {itemDetails[`${itemDetails.category.toLowerCase()}_price`]}
@@ -117,7 +117,7 @@ const Particularitem = () => {
               {itemDetails.features && itemDetails.features.length > 0 && (
                 <div>
                   <p className="text-xl font-bold text-blue-500">Features:</p>
-                  <ul className="list-disc pl-5">
+                  <ul className="list-disc pl-5 space-y-3 mt-3">
                     {itemDetails.features.map((feature, index) => (
                       <li key={index} className="text-gray-700 text-sm">
                         {feature}

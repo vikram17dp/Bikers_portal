@@ -344,6 +344,8 @@ export const portal_list = [
               torque: "110 Nm",
               weight: "65 kg",
               top_speed: "220 km/h",
+            video_url: "https://example.com/rebel500-video"
+
             },
             {
               _id: "14",
@@ -360,6 +362,8 @@ export const portal_list = [
               torque: "64 Nm",
               weight: "55 kg",
               top_speed: "200 km/h",
+            video_url: "https://example.com/rebel500-video"
+
             },
             {
               _id: "15",
@@ -376,6 +380,8 @@ export const portal_list = [
               torque: "112 Nm",
               weight: "70 kg",
               top_speed: "280 km/h",
+            video_url: "https://example.com/rebel500-video"
+
             },
             {
               _id: "16",
@@ -392,6 +398,8 @@ export const portal_list = [
               torque: "28 Nm",
               weight: "45 kg",
               top_speed: "130 km/h",
+            video_url: "https://example.com/rebel500-video"
+
             },
             {
               _id: "17",
@@ -408,6 +416,8 @@ export const portal_list = [
               torque: "125 Nm",
               weight: "68 kg",
               top_speed: "240 km/h",
+            video_url: "https://example.com/rebel500-video"
+
             },
             {
               _id: "18",
@@ -424,6 +434,8 @@ export const portal_list = [
               torque: "100 Nm",
               weight: "50 kg",
               top_speed: "210 km/h",
+            video_url: "https://example.com/rebel500-video"
+
             },
         
           
@@ -446,6 +458,9 @@ export const portal_list = [
                   "Rust-resistant coating",
                   "Lightweight design"
                 ],
+                video_url: "https://example.com/rebel500-video"
+
+
               },
               {
                 _id: "20",
@@ -465,6 +480,9 @@ export const portal_list = [
                   "Durable construction",
                   "Corrosion-resistant"
                 ],
+                video_url: "https://example.com/rebel500-video"
+
+
               },
               {
                 _id: "21",
@@ -483,6 +501,8 @@ export const portal_list = [
                   "Superior exhaust flow",
                   "Race-proven design"
                 ],
+                video_url: "https://example.com/rebel500-video"
+
                 
               }
 ,              
