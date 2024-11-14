@@ -22,7 +22,7 @@ const TopBikes = () => {
           <div
             key={bike._id}
             onClick={() => {
-              navigate(`/bike-details/${bike._id}`);
+              navigate(`/item-details/${bike._id}`);
               window.scrollTo(0, 0); 
             }}
             className="border border-gray-200 rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform duration-500 hover:-translate-y-2 hover:shadow-xl"
@@ -38,7 +38,7 @@ const TopBikes = () => {
               <h2 className="text-xl font-semibold mb-2 text-gray-700">{bike.bike_name}</h2>
               <p className="text-gray-500 text-sm mb-4">{bike.description}</p>
               <div className="flex justify-between items-center text-sm mt-3">
-                <span className="text-blue-700 font-bold">${bike.bike_price}</span>
+                <span className="text-blue-700 font-bold">₹{bike.bike_price}</span>
                 <span className="text-green-600">{bike.bike_mileage} km/l</span>
               </div>
             </div>

@@ -8,6 +8,7 @@ import AllBikes from './Components/AllBikes'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
 import SignUp from './Components/Signup'
+import Particularitem from './Components/pages/Particularitem'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/all-bikes' element={<AllBikes/>}/>
         <Route path='/all-bikes/:category' element={<AllBikes />} />
+        <Route path='/item-details/:id' element={<Particularitem/>}/>
       </Routes>
       <Footer/>
 
