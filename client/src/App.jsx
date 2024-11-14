@@ -7,7 +7,7 @@ import Contact from './Components/Contact'
 import AllBikes from './Components/AllBikes'
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
-import SignUp from './Components/Signup'
+import SignUp from './Components/SignUp'
 import Particularitem from './Components/pages/Particularitem'
 
 function App() {
