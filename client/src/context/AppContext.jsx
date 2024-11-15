@@ -4,7 +4,11 @@ import axios from 'axios'
 
 export const AppContext = createContext();
 
+<<<<<<< HEAD
 const AppContextProvider = ({children})=>{
+=======
+const AppContextProvider = ({Children})=>{
+>>>>>>> 6e38898927702cfe2446767be0ed2aaae697d19c
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
     const [token,setToken] = useState(localStorage.getItem('token')?localStorage.getItem('token'):false);
     const [userData,setUserData] = useState(false)
@@ -41,7 +45,11 @@ const AppContextProvider = ({children})=>{
 
     return (
         <AppContext.Provider value={value}>
+<<<<<<< HEAD
             {children}
+=======
+            {Children}
+>>>>>>> 6e38898927702cfe2446767be0ed2aaae697d19c
         </AppContext.Provider>
     )
 }
