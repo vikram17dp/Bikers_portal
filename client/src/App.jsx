@@ -9,11 +9,16 @@ import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
 import SignUp from './Components/SignUp'
 import Particularitem from './Components/pages/Particularitem'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   return (
     <div>
       <Navbar/>
+      <ToastContainer position="top-center" />
+
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
