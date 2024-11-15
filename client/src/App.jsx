@@ -11,6 +11,7 @@ import SignUp from './Components/SignUp'
 import Particularitem from './Components/pages/Particularitem'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import ProfilePage from './Components/ProfilePage'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/all-bikes' element={<AllBikes/>}/>
         <Route path='/all-bikes/:category' element={<AllBikes />} />
         <Route path='/item-details/:id' element={<Particularitem/>}/>
+        <Route  path='/my-profile' element={<ProfilePage/>}/>
       </Routes>
       <Footer/>
 

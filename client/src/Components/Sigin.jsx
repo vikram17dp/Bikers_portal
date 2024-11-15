@@ -13,7 +13,7 @@ import { app } from '../firebase.js'
 export default function Sigin() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const { backendUrl, setToken } = useContext(AppContext)
+  const { backendUrl, setToken ,setUserData,userData} = useContext(AppContext)
   const navigate = useNavigate()
 
   const handleLogin = async (event) => {
@@ -36,37 +36,33 @@ export default function Sigin() {
     }
   }
 
-  const handleGoogleSignIn = async () => {
+  const handleGoogleLogin = async () => {
+    const auth = getAuth();
+    const provider = new GoogleAuthProvider();
     try {
-      const provider = new GoogleAuthProvider()
-      const auth = getAuth(app)
-      const result = await signInWithPopup(auth, provider)
-
-      const { displayName, email, photoURL } = result.user
-
-      try {
-        const res = await axios.post(`${backendUrl}/api/user/google`, {
-          name: displayName,
-          email: email,
-          image: photoURL,
-        })
-
-        if (res.status === 200) {
-          const { token } = res.data
-          localStorage.setItem('token', token)
-          setToken(token)
-          toast.success('Google login successful!')
-          navigate('/')
-        } else {
-          toast.error(res.data.message || 'Google login failed.')
-        }
-      } catch (error) {
-        toast.error(error.response?.data?.message || 'Network error during Google login.')
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      const { email, displayName, photoURL } = user;
+      
+      const response = await axios.post(`${backendUrl}/api/user/google`, {
+        name: displayName,
+        email,
+        image: photoURL,
+      });
+  
+      if (response.data.success) {
+        setToken(response.data.token);
+        setUserData(response.data.user);
+        localStorage.setItem('token', response.data.token);
+      } else {
+        toast.error(response.data.message);
       }
     } catch (error) {
-      toast.error('Google sign-in failed.')
+      toast.error("Google login failed");
     }
-  }
+  };
+  console.log(userData.image);
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-100 to-purple-100 py-12 px-4 sm:px-6 lg:px-8">
@@ -131,7 +127,7 @@ export default function Sigin() {
           <div className="mt-6">
             <button
               type="button"
-              onClick={handleGoogleSignIn}
+              onClick={handleGoogleLogin}
               className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
             >
               <FcGoogle className="w-5 h-5 mr-2" />

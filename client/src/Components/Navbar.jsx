@@ -1,18 +1,27 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import { assets } from '../assets/assets';
+import React, { useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { assets } from "../assets/assets";
+import { AppContext } from "../context/AppContext";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { token, userData, setToken } = useContext(AppContext);
+  const navigate = useNavigate();
+  console.log(userData);
 
   const handleToggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const logout = () => {
+    setToken(false);
+    localStorage.removeItem("token");
+  };
+
   return (
-    <nav className="bg-white text-black border-b-2 border-gray-300 font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white text-black border-b-2 border-gray-300 font-sans px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Logo Section */}
           <div className="flex-shrink-0">
@@ -26,7 +35,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links (Visible on larger screens) */}
-          <div className="hidden sm:flex flex-grow justify-center items-center space-x-20 ml-[40vh]">
+          <div className="hidden sm:flex flex-grow justify-center items-center space-x-20 ml-4">
             <Link to="/" className="text-black hover:text-gray-600">
               Home
             </Link>
@@ -41,19 +50,51 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Create Account Button (Visible on larger screens) */}
-          <div className="ml-[15vh] sm:block ">
-            <Link to="/SignUp">
-              <button className="bg-blue-600 text-white px-2 py-3  lg:px-4 lg:py-2 rounded-lg">
+          {/* Profile Image or Create Account Button */}
+          <div className="ml-4 sm:block">
+            {token && userData ? (
+              <div className="flex items-center gap-2 group relative cursor-pointer">
+                <img
+                  src={userData?.image}
+                  className="w-12 rounded-full sm:ml-[25vh] md:ml-[10vh] lg:ml-0 mb-1"
+                  alt="Profile Image"
+                />
+
+                <div className="absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block">
+                  <div className="min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4">
+                    <p
+                      className="hover:text-black cursor-pointer"
+                      onClick={() => navigate("/my-profile")}
+                    >
+                      My Profile
+                    </p>
+                    <p
+                      className="hover:text-black cursor-pointer"
+                      onClick={logout}
+                    >
+                      Logout
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <button
+                onClick={() => navigate("/Signin")}
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full font-medium shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              >
                 Create Account
               </button>
-            </Link>
+            )}
           </div>
 
           {/* Hamburger Menu for Small Screens */}
-          <div className="sm:hidden ">
+          <div className="sm:hidden">
             <button onClick={handleToggleMenu} className="text-black">
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-10 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -62,7 +103,7 @@ const Navbar = () => {
       {/* Mobile Menu - Visible only on small screens */}
       {isMenuOpen && (
         <div className="sm:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1  ">
+          <div className="px-2 pt-2 pb-3 space-y-1">
             <Link
               to="/"
               className="block px-3 py-2 rounded-md text-base font-medium text-black hover:text-gray-600 hover:bg-gray-100"
@@ -91,8 +132,17 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            {/* Create Account Button for Mobile View */}
-            
+            {!token && (
+              <button
+                onClick={() => {
+                  navigate("/Signin");
+                  handleToggleMenu();
+                }}
+                className="w-full text-left px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition duration-300 ease-in-out"
+              >
+                Create Account
+              </button>
+            )}
           </div>
         </div>
       )}
