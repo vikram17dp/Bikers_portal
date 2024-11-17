@@ -54,6 +54,7 @@ export default function Sigin() {
         setToken(response.data.token);
         setUserData(response.data.user);
         localStorage.setItem('token', response.data.token);
+        navigate('/')
       } else {
         toast.error(response.data.message);
       }
@@ -61,7 +62,6 @@ export default function Sigin() {
       toast.error("Google login failed");
     }
   };
-  console.log(userData.image);
   
 
   return (
