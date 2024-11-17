@@ -31,6 +31,9 @@ import bike9 from './bike9.jpg'
 import bike10 from './bike10.jpg'
 import bike11 from './bike11.jpg'
 import bike12 from './bike12.jpg'
+import bike13 from './bike12.jpg'
+import bike14 from './bike12.jpg'
+
 
 import engine1 from './engine1.jpg'
 import engine2 from './engine2.jpg'
@@ -87,6 +90,8 @@ export const assets ={
     bike10,
     bike11,
     bike12,
+    bike13,
+    bike14,
     engine1,
     engine2,
     engine3,

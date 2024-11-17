@@ -17,7 +17,7 @@ const Contact = () => {
         <div className="w-full md:w-1/2 flex justify-center">
           <img
             className="max-w-[360px] object-cover rounded-lg shadow-lg"
-            src={assets.bike8}
+            src={assets.bike4}
             alt="Contact BikersPortal"
           />
         </div>

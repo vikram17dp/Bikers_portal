@@ -17,7 +17,7 @@ const About = () => {
         <div className="md:w-1/2 flex justify-center">
           <img
             className="w-full max-w-[360px] object-cover rounded-lg shadow-lg"
-            src={assets.bike8}
+            src={assets.bike6}
             alt="BikersPortal"
           />
         </div>
