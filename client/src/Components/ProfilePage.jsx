@@ -67,7 +67,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-8 bg-gradient-to-r from-blue-100 to-purple-100 shadow-2xl rounded-xl transition-all duration-300 ease-in-out hover:shadow-3xl  lg:mt-5">
+    <div className="max-w-4xl mx-auto p-8 bg-gradient-to-r from-red-50 to-gray-200 shadow-2xl rounded-xl transition-all duration-300 ease-in-out hover:shadow-3xl  lg:mt-5 ">
       <div className="flex flex-col md:flex-row items-center md:items-start mb-12 space-y-6 md:space-y-0 md:space-x-12">
         <div className="relative group">
           <img
