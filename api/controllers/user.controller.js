@@ -128,34 +128,38 @@ export const registeruser = async (req, res) => {
   }
   export const updateProfile = async (req, res) => {
     try {
-      const { userId, name, address, phone, dob, gender } = req.body;
-      const imageFile = req.file;
-      if (!name || !address || !phone || !dob || !gender) {
-        return res
-          .status(400)
-          .json({ success: false, message: "Missing details" });
-      }
-      await userModel.findByIdAndUpdate(userId, {
-        name,
-        phone,
-        dob,
-        gender,
-        address,
-      });
-      if (imageFile) {
-        const imageUpload = await cloudinary.uploader.upload(imageFile.path, {
-          resource_type: "image",
+        const { userId, name, address, phone, dob, gender } = req.body;
+        const imageFile = req.file;
+
+        if (!name || !address || !phone || !dob || !gender) {
+            return res
+                .status(400)
+                .json({ success: false, message: "Missing details" });
+        }
+
+        await userModel.findByIdAndUpdate(userId, {
+            name,
+            phone,
+            dob,
+            gender,
+            address,
         });
-        const imageURL = imageUpload.secure_url;
-        await userModel.findByIdAndUpdate(userId, { image: imageURL });
-        return res.json({
-          success: true,
-          message: "image updated successfully!",
-        });
-      }
-      res.json({ success: true, message: "profile updated" });
+
+        if (imageFile) {
+            const imageUpload = await cloudinary.uploader.upload(imageFile.path, {
+                resource_type: "image",
+            });
+            const imageURL = imageUpload.secure_url;
+            await userModel.findByIdAndUpdate(userId, { image: imageURL });
+            return res.json({
+                success: true,
+                message: "image updated successfully!",
+            });
+        }
+
+        res.json({ success: true, message: "profile updated" });
     } catch (error) {
-      console.error(error);
-      return res.status(500).json({ success: false, message: error.message });
+        console.error(error);
+        return res.status(500).json({ success: false, message: error.message });
     }
-  };
+};
