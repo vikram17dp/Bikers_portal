@@ -56,7 +56,7 @@ const Navbar = () => {
               <div className="flex items-center gap-2 group relative cursor-pointer">
                 <img
                   src={userData?.image}
-                  className="w-12 rounded-full sm:ml-[25vh] md:ml-[10vh] lg:ml-0 mb-1"
+                  className="w-10  rounded-full ml-[28vh] md:ml-[10vh] lg:ml-0 mb-1"
                   alt="Profile Image"
                 />
 
@@ -132,17 +132,7 @@ const Navbar = () => {
             >
               Contact
             </Link>
-            {!token && (
-              <button
-                onClick={() => {
-                  navigate("/Signin");
-                  handleToggleMenu();
-                }}
-                className="w-full text-left px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition duration-300 ease-in-out"
-              >
-                Create Account
-              </button>
-            )}
+           
           </div>
         </div>
       )}
