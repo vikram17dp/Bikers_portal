@@ -38,7 +38,7 @@ const userSchema = new mongoose.Schema(
     },
     phone: {
       type: String,
-      default: "00000000000",
+      default: "+91 123-45678",
     },
   },
   { timestamps: true }
