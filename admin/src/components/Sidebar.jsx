@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom";
 import { FaHome, FaUser, FaUserPlus, FaUsers } from "react-icons/fa";
 
 const Sidebar = () => {
-  // State to track if sidebar is collapsed
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const linkClass = ({ isActive }) =>
     `flex items-center gap-3 py-3.5 px-4 md:px-8 cursor-pointer 

@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import { v2 as cloudinary } from "cloudinary";
 import jwt from "jsonwebtoken";
 import userModel from "../models/user.model.js";
-import Bike from '../models/bike.model.js'
+import {Bike} from '../models/bike.model.js'
 
 export const loginAdmin = async (req, res) => {
     try {

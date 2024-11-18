@@ -1,11 +1,11 @@
-import { createContext, useState } from "react";
-import axios from "axios";
-import { toast } from "react-toastify";
+import { createContext, useState } from 'react';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 export const AdminContext = createContext();
 
 const AdminContextProvider = ({ children }) => {
-  const [aToken, setAToken] = useState(localStorage.getItem("aToken") || "");
+  const [aToken, setAToken] = useState(localStorage.getItem('aToken') || '');
   const [bikes, setBikes] = useState([]);
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
@@ -20,7 +20,7 @@ const AdminContextProvider = ({ children }) => {
       if (response.data.success) {
         setBikes(response.data.bikes);
       } else {
-        toast.error(response.data.message || "Failed to fetch bikes");
+        toast.error(response.data.message || 'Failed to fetch bikes');
       }
     } catch (error) {
       toast.error(error.message);
@@ -72,13 +72,10 @@ const AdminContextProvider = ({ children }) => {
     getAllBikes,
     addBike,
     deleteBike,
+    backendUrl,
   };
 
-  return (
-    <AdminContext.Provider value={value}>
-      {children}
-    </AdminContext.Provider>
-  );
+  return <AdminContext.Provider value={value}>{children}</AdminContext.Provider>;
 };
 
 export default AdminContextProvider;

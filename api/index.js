@@ -4,6 +4,7 @@ import connectDB from './config/mongodb.js'
 import userRouter from './routes/user.routes.js'
 import cors from 'cors'
 import connectCloudinary from './config/cloudinary.js'
+import adminRouter from './routes/admin.route.js'
 const app = express()
 app.use(express.json())
 dotenv.config()
@@ -14,6 +15,7 @@ const port = process.env.PORT || 4000;
 
 app.use(cors())
 app.use('/api/user',userRouter)
+app.use('/api/admin',adminRouter)
 
 app.get('/',(req,res)=>{
     res.send('API IS WORKING')
