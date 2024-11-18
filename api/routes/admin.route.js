@@ -1,13 +1,17 @@
-import express from 'express'
+import express from 'express';
 
-import authUser from '../middlewares/authUser.js';
-import upload from '../middlewares/multer.js'
-import authAdmin from '../middlewares/authAdmin.js';
-import {addBike} from '../controllers/admin.controller.js';
+import multer from 'multer';
+import { addBike, deleteBike, getAllBikes, loginAdmin } from '../controllers/admin.controller';
 
 const adminRouter = express.Router();
 
-adminRouter.post('/login',loginAdmin);
-adminRouter.post('/add-items',authAdmin,upload.single('image'),addBike)
+const upload = multer({ dest: 'uploads/' });
+adminRouter.post('/login',loginAdmin)
 
-export default adminRouter
+adminRouter.get('/api/admin/all-bikes', getAllBikes);
+
+adminRouter.post('/api/admin/add-bike', upload.single('bike_image'), addBike);
+
+adminRouter.delete('/api/admin/delete-bike/:bikeId', deleteBike);
+
+export default router;

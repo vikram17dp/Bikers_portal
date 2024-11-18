@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { portal_list } from "../../assets/assets";
+import { portal_list } from "../assets/assets";
 import { FaPlay } from "react-icons/fa";
 
 const Particularitem = () => {
-  const { id, category } = useParams();
+  const { id } = useParams();
   const [itemDetails, setItemDetails] = useState(null);
   const [showVideo, setShowVideo] = useState(false);
+  const [isUserAdmin, setIsUserAdmin] = useState(true); // Simulating admin check (replace this with real logic)
 
   useEffect(() => {
     const item = portal_list.find((item) => item._id === id);
@@ -25,6 +26,12 @@ const Particularitem = () => {
 
   const closeVideoPopup = () => {
     setShowVideo(false);
+  };
+
+  const handleEditClick = () => {
+    // Redirect to the edit page (or show an edit form)
+    console.log("Redirect to edit page or open edit form");
+    // Example: history.push(`/edit/${id}`);
   };
 
   return (
@@ -128,7 +135,8 @@ const Particularitem = () => {
             </div>
           </div>
 
-          {/* Video Button */}
+          <div className="flex flex-wrap sm:gap-10 gap-4">
+            {/* Video Button */}
           {itemDetails.video_url && (
             <button
               onClick={handleVideoPopup}
@@ -137,6 +145,17 @@ const Particularitem = () => {
               <FaPlay /> Watch Video
             </button>
           )}
+
+          {/* Edit Button */}
+          {isUserAdmin && (
+            <button
+              onClick={handleEditClick}
+              className="bg-blue-600 text-white py-3 px-5 sm:mt-6 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition self-start"
+            >
+              Edit Item
+            </button>
+          )}
+          </div>
         </div>
       </div>
 

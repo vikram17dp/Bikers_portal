@@ -9,6 +9,7 @@ import Navbar from './components/Navbar.jsx';
 import Login from './pages/Login.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import AllItems from './pages/Admin/AllItems.jsx';
+import Particularitem from './pages/Particularitem.jsx';
 
 function App() {
   return (
@@ -17,13 +18,15 @@ function App() {
       <Navbar />
       <div className="flex items-start">
         <Sidebar />
-        <div className="flex-grow ml-60">
+        <div className="flex-grow ">
           <Routes>
             {/* Admin Routes */}
             <Route path="/admin-dashboard" element={<DashBoard />} />
             <Route path="/user-management" element={<UserManagement />} />
             <Route path="/add-items" element={<AddItems />} />
             <Route path="/all-items" element={<AllItems />} />
+        <Route path='/all-items/:id' element={<Particularitem/>}/>
+
             {/* Add any other routes you need here */}
           </Routes>
         </div>
