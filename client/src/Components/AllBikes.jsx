@@ -40,7 +40,7 @@ export default function AllItems() {
         <p className="text-gray-500 text-sm mb-4">{item.description}</p>
         <div className="flex justify-between items-center text-sm mt-3">
           <span className="text-blue-700 font-bold text-sm"><span className="text-gray-600">price:</span> ₹{item[`${item.category.toLowerCase()}_price`]}</span>
-          {item.bike_mileage && <span className="text-green-600"><span className="text-gray-600">mileage:</span> {item.bike_mileage} km/l</span>}
+          {item.bike_mileage && <span className="text-green-600"><span className="text-gray-600">mileage:</span> {item.bike_mileage} </span>}
         </div>
       </>
     )
