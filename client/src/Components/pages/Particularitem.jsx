@@ -118,7 +118,10 @@ const Particularitem = () => {
                   <p className="text-xl font-bold text-blue-500">Features:</p>
                   <ul className="list-disc pl-5 space-y-3 mt-3 ">
                     {itemDetails.features.map((feature, index) => (
-                      <li key={index} className="text-gray-700 text-sm font-sans   ">
+                      <li
+                        key={index}
+                        className="text-gray-700 text-sm font-sans   "
+                      >
                         {feature}
                       </li>
                     ))}
@@ -153,7 +156,10 @@ const Particularitem = () => {
             <iframe
               width="100%"
               height="500"
-              src={itemDetails.video_url}
+              src={`https://www.youtube.com/embed/${
+                itemDetails.video_url.split("v=")[1] ||
+                itemDetails.video_url.split("/").pop()
+              }`}
               title="Bike Promo Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

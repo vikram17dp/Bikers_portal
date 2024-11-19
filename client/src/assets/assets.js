@@ -155,7 +155,7 @@ export const portal_list = [
         top_speed: "120 mph",
         bike_mileage: "18 km/l",
         description: "A high-performance cruiser with modern features and classic style.",
-        video_url: "https://www.youtube.com/watch?v=J0Ep6ZlqA9k",
+        video_url: "https://youtu.be/EY70RvwHhIw?si=hY86jQKCsdzBlkwY",
         features: [
             "1250cc V-Twin engine for powerful performance",
             "Modern tech with TFT display and LED lights",
@@ -178,7 +178,7 @@ export const portal_list = [
         top_speed: "130 mph",
         bike_mileage: "22 km/l",
         description: "Lightweight, agile, and packed with torque for spirited rides.",
-        video_url: "https://example.com/mt07-video",
+        video_url: "https://youtu.be/MHKGn3JYsbU?si=i3mJuSp2Ga83QdGe",
         features: [
             "689cc parallel-twin engine for great torque",
             "Quick-revving and agile handling",
@@ -189,7 +189,7 @@ export const portal_list = [
     },
     {
         _id: "3",
-        bike_name: "Pulsar-220",
+        bike_name: "Pulsar-ns125",
         bike_image: bike3,
         bike_price: "1,40,000",
         brand: "Bajaj",
@@ -201,7 +201,7 @@ export const portal_list = [
         top_speed: "105 mph",
         bike_mileage: "26 km/l",
         description: "A sporty and agile motorcycle ideal for beginners and experienced riders.",
-        video_url: "https://example.com/ninja400-video",
+        video_url: "https://youtu.be/GBSX_eF8WxM?si=h2fpyT74ytkzVb5g",
         features: [
             "399cc parallel-twin engine for balanced performance",
             "Lightweight chassis for easy handling",
@@ -224,7 +224,7 @@ export const portal_list = [
         top_speed: "116 mph",
         bike_mileage: "24 km/l",
         description: "A versatile naked bike that balances style, comfort, and performance.",
-        video_url: "https://example.com/cb500f-video",
+        video_url: "https://youtu.be/PqFuI_LzZm8?si=Ym_WAZ4b4qrzThh3",
         features: [
             "471cc parallel-twin engine for great balance",
             "Ergonomic design for comfortable long rides",
@@ -235,7 +235,7 @@ export const portal_list = [
     },
     {
         _id: "5",
-        bike_name: "TVS",
+        bike_name: "TVS Star City",
         bike_image: bike5,
         bike_price: "85,000",
         brand: "TVS",
@@ -247,7 +247,7 @@ export const portal_list = [
         top_speed: "140 mph",
         bike_mileage: "17 km/l",
         description: "A powerful naked bike with a stunning design and exhilarating performance.",
-        video_url: "https://example.com/monster821-video",
+        video_url: "https://youtu.be/1Timfs_ao3I?si=0n2FPhVwQCv9l_91",
         features: [
             "821cc L-Twin engine for unmatched torque",
             "Aggressive naked bike styling",
@@ -270,7 +270,7 @@ export const portal_list = [
         top_speed: "125 mph",
         bike_mileage: "20 km/l",
         description: "Adventure bike designed for both on-road and off-road riding.",
-        video_url: "https://example.com/f850gs-video",
+        video_url: "https://youtu.be/zyBh1-1bSBA?si=yTJNPa1Cz5Hv1qlv",
         features: [
             "853cc engine designed for all-terrain performance",
             "Adjustable suspension for both road and off-road use",
@@ -293,7 +293,7 @@ export const portal_list = [
         top_speed: "110 mph",
         bike_mileage: "15 km/l",
         description: "A classic cruiser with a rich heritage and modern comfort.",
-        video_url: "https://example.com/softail-video",
+        video_url: "https://youtu.be/355MvGsmY6s?si=RAZJzGTNIKOsxVNC",
         features: [
             "1746cc V-Twin engine for cruising power",
             "Modern suspension and braking systems",
@@ -304,7 +304,7 @@ export const portal_list = [
     },
     {
         _id: "8",
-        bike_name: "Royal Enfield-2022",
+        bike_name: "Royal Enfield classic",
         bike_image: bike8,
         bike_price: "2,30,000",
         category: 'Bike',
@@ -316,7 +316,7 @@ export const portal_list = [
         top_speed: "150 mph",
         bike_mileage: "19 km/l",
         description: "A legend among sport bikes, offering performance and handling.",
-        video_url: "https://example.com/gsxr750-video",
+        video_url: "https://youtu.be/JfGPZ_ql8Gc?si=CPvWfjR4TaYkXDlM",
         features: [
             "750cc engine with high-revving capabilities",
             "Sporty and aggressive styling",
@@ -328,7 +328,7 @@ export const portal_list = [
     {
         _id: "9",
         category: 'Bike',
-        bike_name: "Royal Enfield-2018",
+        bike_name: "Royal Enfield 350",
         bike_image: bike9,
         bike_price: "2,00,000",
         brand: "Royal Enfield",
@@ -339,7 +339,7 @@ export const portal_list = [
         top_speed: "105 mph",
         bike_mileage: "30 km/l",
         description: "Lightweight, nimble, and powerful, perfect for city riding.",
-        video_url: "https://example.com/390duke-video",
+        video_url: "https://youtu.be/b9XugLNGfms?si=Lgw6mhYjnDoGxJQn",
         features: [
             "373cc single-cylinder engine for quick acceleration",
             "Sharp, agile handling for city riding",
@@ -350,7 +350,7 @@ export const portal_list = [
     },
     {
         _id: "10",
-        bike_name: "TVS Apachee",
+        bike_name: "TVS Apachee RTR-160",
         bike_image: bike10,
         bike_price: "1,20,000",
         category: 'Bike',
@@ -362,7 +362,7 @@ export const portal_list = [
         top_speed: "115 mph",
         bike_mileage: "20 km/l",
         description: "Classic British styling combined with modern performance.",
-        video_url: "https://example.com/bonneville-video",
+        video_url: "https://youtu.be/vNXBokDqpbw?si=ytBTBKbNl1fWpeXG",
         features: [
             "1200cc parallel-twin engine for smooth power delivery",
             "Retro-inspired styling with modern features",
@@ -385,7 +385,7 @@ export const portal_list = [
         top_speed: "70 mph",
         bike_mileage: "35 km/l",
         description: "A retro cruiser with timeless design and modern reliability.",
-        video_url: "https://example.com/classic350-video",
+        video_url: "https://youtu.be/2DtexSRk0Ys?si=LHqnWv_eaL_ktp3j",
         features: [
             "349cc single-cylinder engine for classic thump",
             "Timeless retro design with modern performance",
@@ -408,7 +408,7 @@ export const portal_list = [
         top_speed: "186 mph",
         bike_mileage: "15 km/l",
         description: "An aggressive and advanced superbike designed for high performance.",
-        video_url: "https://example.com/rsv41100-video",
+        video_url: "https://youtu.be/tRn_Pybt9gQ?si=kByWtv5Bohgb5lxl",
         features: [
             "1077cc V4 engine for world-class performance",
             "Advanced electronic systems for optimal track performance",
